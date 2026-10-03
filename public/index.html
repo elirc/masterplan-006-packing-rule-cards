@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Packing Rule Cards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+<div class="eyebrow">Fieldwork / Masterplan M006</div>
+<h1>Packing Rule Cards</h1>
+<p class="lede">A traveler wants a tiny script explaining what to pack for three fictional weather conditions.</p>
+</header>
+<main id="main" tabindex="-1">
+<section class="panel">
+<h2>Choose a fictional forecast</h2>
+<form id="packing" novalidate>
+<label for="temperature">Temperature (°C)</label>
+<input id="temperature" type="number" step="any" value="10">
+<label for="weather">Conditions</label>
+<select id="weather">
+<option value="dry">Dry</option>
+<option value="rain">Rain</option>
+<option value="wind">Wind</option>
+</select>
+<button>Make a packing card</button>
+</form>
+<output id="result" aria-live="polite">Choose inputs, then make a card.</output>
+</section>
+<section>
+<h2>Rules you can inspect</h2>
+<p>Below 10°C: warm layer. From 10°C up to 25°C: light layer. At 25°C and above: sun hat. Every card includes a water bottle. Rain and wind each add their own item.</p>
+<p class="muted">A branch-practice toy, not weather or travel safety advice.</p>
+</section>
+</main>
+<footer>Fictional local learning project. No account, tracking or external service. <a href="https://github.com/elirc/masterplan-006-packing-rule-cards">Code and learning guide</a>
+</footer>
+<script type="module" src="app.js">
+</script>
+</body>
+</html>
