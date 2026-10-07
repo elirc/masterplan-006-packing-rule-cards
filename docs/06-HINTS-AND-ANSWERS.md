@@ -8,7 +8,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 **Hint 1 — ownership:** Begin from `recommendPacking`. Add a reason string derived from the branch that selected the band.
 
-**Hint 2 — reasoning:** Revisit the decision “Validate at both the UI and core boundary”. Ask yourself: Explain why Number("") would hide a missing input.
+**Hint 2 — reasoning:** Revisit the decision “Choose an else-if partition”. Ask yourself: Explain why several independent temperature if statements could add contradictory items.
 
 **Answer direction:** A defensible solution demonstrates this observable result: Boundary examples and displayed explanations agree. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -16,9 +16,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 02: Add a reset action
 
-**Hint 1 — ownership:** Begin from `recommendPacking`. Add a button that restores the example inputs and clears previous output.
+**Hint 1 — ownership:** Begin from the submit handler in `public/app.js`. Add a button that restores the example inputs and clears previous output.
 
-**Hint 2 — reasoning:** Revisit the decision “Choose an else-if partition”. Ask yourself: Explain why several independent temperature if statements could add contradictory items.
+**Hint 2 — reasoning:** Revisit the decision “Return data rather than write the DOM”. Ask yourself: Mutate one returned array and predict the next function call.
 
 **Answer direction:** A defensible solution demonstrates this observable result: Reset does not submit the form or call the core unexpectedly. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -26,9 +26,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 03: Support one new weather value
 
-**Hint 1 — ownership:** Begin from `recommendPacking`. Choose a fourth fictional condition and extend validation, rule and UI together.
+**Hint 1 — ownership:** Begin from the weather list in `recommendPacking` and the `#weather` select. Choose a fourth fictional condition and extend validation, rule and UI together.
 
-**Hint 2 — reasoning:** Revisit the decision “Return data rather than write the DOM”. Ask yourself: Mutate one returned array and predict the next function call.
+**Hint 2 — reasoning:** Revisit the decision “Validate at both the UI and core boundary”. Ask yourself: Explain why Number("") would hide a missing input.
 
 **Answer direction:** A defensible solution demonstrates this observable result: Unknown values still fail; the new value adds only its documented item. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -36,9 +36,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 04: Show the input in the result
 
-**Hint 1 — ownership:** Begin from `recommendPacking`. Include the temperature used in the displayed card without changing core input types.
+**Hint 1 — ownership:** Begin from the result text written in `public/app.js`. Include the temperature used in the displayed card without changing core input types.
 
-**Hint 2 — reasoning:** Revisit the decision “Validate at both the UI and core boundary”. Ask yourself: Explain why Number("") would hide a missing input.
+**Hint 2 — reasoning:** Revisit the decision “Return data rather than write the DOM”. Ask yourself: Mutate one returned array and predict the next function call.
 
 **Answer direction:** A defensible solution demonstrates this observable result: The displayed input matches the submitted value, including zero. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -46,7 +46,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 05: Strengthen one boundary test
 
-**Hint 1 — ownership:** Begin from `recommendPacking`. Write a new test that would fail for a plausible incorrect comparison.
+**Hint 1 — ownership:** Begin from `test/core.test.js`. Write a new test that would fail for a plausible incorrect comparison.
 
 **Hint 2 — reasoning:** Revisit the decision “Choose an else-if partition”. Ask yourself: Explain why several independent temperature if statements could add contradictory items.
 
@@ -56,7 +56,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 06: Add a pure explanation formatter
 
-**Hint 1 — ownership:** Begin from `recommendPacking`. Extract result-to-text formatting from the event handler into a small function.
+**Hint 1 — ownership:** Begin from the `result.textContent` line in the submit handler. Extract result-to-text formatting from the event handler into a small function.
 
 **Hint 2 — reasoning:** Revisit the decision “Return data rather than write the DOM”. Ask yourself: Mutate one returned array and predict the next function call.
 

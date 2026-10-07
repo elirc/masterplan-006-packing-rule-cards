@@ -20,13 +20,13 @@ Start with 9.99, 10, 24.99 and 25. Those four values force you to decide equalit
 
 Open app.js to see that form values arrive as text. Blank input is rejected before Number is called. Then open core.js: it still rejects strings, NaN and Infinity because another caller might bypass the form. The core has one clear contract rather than guessing what arbitrary input should mean.
 
-**Pause and produce evidence:** 10, rain. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** "10" passed directly to core. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 3: Return an explanation-shaped result
 
 The function returns band, weather and items. This structure is sufficient for the UI to display a card and for tests to inspect the actual decision. Do not return a preformatted HTML string from the calculation. The new array is constructed inside each call, so changes to one result do not become hidden global state.
 
-**Pause and produce evidence:** 25, wind. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** 10, rain. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 4: Show failures without losing inputs
 
@@ -36,7 +36,7 @@ The form prevents its default navigation and catches the core’s errors. It wri
 
 ## Keep the implementation reviewable
 
-A useful commit has one understandable reason to exist. Separate the initial working slice, the checks that expose its important boundaries, and the teaching material that explains it. The published commits in this repository were assembled from verified working files; they are real commits, not fabricated evidence of a long historical development process. M001 additionally contains the actual two-file baseline and a separate opening-time correction.
+A useful commit has one understandable reason to exist. Separate the initial working slice, the checks that expose its important boundaries, and the teaching material that explains it. The published commits in this repository were assembled from verified working files; they are real commits, not fabricated evidence of a long historical development process.
 
 For your own variation, commit at a point where the behavior and evidence agree. Describe the trigger, the resulting behavior and the check in the commit message or review note. Avoid mixing a rule change with unrelated formatting because it makes the learning decision harder to see.
 
